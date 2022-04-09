@@ -9,6 +9,6 @@ jobs:
     - uses: bluwy/substitute-string-action@v1
       id: sub
       with:
-        _input-file: '././config.local.php'
+        _input-file: './.github/config.local.php'
         dentacarts.com: Test.com
     - run: echo ${{ steps.sub.outputs.result }} # Prints 'Hello GitHub!'
