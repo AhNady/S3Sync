@@ -16,4 +16,4 @@ jobs:
       with:
         _input-file: '././config.local.php'
         dentacarts.com: Test.com
-    - run: cat ././config.local.php  # Prints 'Hello GitHub!'
+    - run: echo ${{ steps.sub.outputs.result }}
