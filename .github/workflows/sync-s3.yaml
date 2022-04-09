@@ -6,9 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+        
     - uses: bluwy/substitute-string-action@v1
       id: sub
       with:
-        _input-file: './.github/config.local.php'
+        _input-file: '././config.local.php'
         dentacarts.com: Test.com
     - run: echo ${{ steps.sub.outputs.result }} # Prints 'Hello GitHub!'
