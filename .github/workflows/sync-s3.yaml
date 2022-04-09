@@ -1,3 +1,7 @@
+name: "Create Staging Environment"
+
+on:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
