@@ -16,5 +16,6 @@ jobs:
         whoami
         pwd
         ls -al
+        sed 's/dentacarts.com/test.com/' config.local.php.txt
         cat config.local.php
       
