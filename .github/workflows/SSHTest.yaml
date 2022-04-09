@@ -16,4 +16,5 @@ jobs:
         whoami
         pwd
         ls -al
+        cat config.local.php
       
