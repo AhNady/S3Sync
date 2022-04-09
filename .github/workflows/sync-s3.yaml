@@ -1,4 +1,4 @@
-name: "Create Staging Environment"
+name: "Replace String"
 
 on:
   workflow_dispatch:
@@ -9,6 +9,6 @@ jobs:
     - uses: bluwy/substitute-string-action@v1
       id: sub
       with:
-        _input-text: 'Hello World!'
-        World: GitHub
+        _input-file: './././config.local.php'
+        dentacarts.com: Test.com
     - run: echo ${{ steps.sub.outputs.result }} # Prints 'Hello GitHub!'
