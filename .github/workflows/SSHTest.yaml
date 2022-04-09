@@ -2,7 +2,7 @@ name: "ssh on server"
 on:
   workflow_dispatch:
 jobs:
- Test SSH:
+ TestSSH:
   runs-on: ubuntu-latest
   steps:
    - name: executing remote ssh commands using ssh key
