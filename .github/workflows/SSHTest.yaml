@@ -13,9 +13,6 @@ jobs:
       key: ${{ secrets.KEY }}
       port: ${{ secrets.PORT }}
       script: |
-        whoami
-        pwd
-        ls -al
-        sed 's/dentacarts.com/test.com/' config.local.php > output.php && mv output.php config.local.php
-        cat config.local.php
-      
+        sed 's/dentacarts.com/DNS_NAME/' /var/www/html/config.local.php > output.php && sudo mv output.php /var/www/html/config.local.php
+        sed 's/52.17.212.152/IP_Address/' /var/www/html/config.local.php > output.php && sudo mv output.php /var/www/html/config.local.php
+        sed 's/auth.dentacarts.com/auth-staging.dentacartscloud.net/' /var/www/html/app/addons/dentacarts_auth/Tygh/HybridProvidersDCAuth.php > output.php && sudo mv output.php /var/www/html/app/addons/dentacarts_auth/Tygh/HybridProvidersDCAuth.php
